@@ -1,14 +1,17 @@
-import css from './FriendList.module.css'
+import FriendList from 'components/FriendList/FriendList';
 
+function Friends ({items}) {
 
-const FriendList =() =>{
     return(
-        <li className={css.item}>
-  <span className={css.status}></span>
-  <img className={css.avatar} src="" alt="User avatar" width="48" />
-  <p className={css.name}></p>
-</li>
-    );
-};
-
-export default FriendList;
+        {items.map(item =>(
+            key={item.id}
+            <FriendList
+            
+            avatar={item.avatar}
+            name={item.name}
+            isOnline={item.isOnline}
+            />
+        ))}
+    )
+}
+export default Friends;

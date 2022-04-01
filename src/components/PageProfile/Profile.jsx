@@ -40,5 +40,9 @@ PageProfile.propTypes ={
     username: PropTypes.string,
     tag: PropTypes.string,
     location: PropTypes.string,
-    stats: PropTypes.array,
+    stats: PropTypes.shape({
+      followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes:PropTypes.number.isRequired
+    })
 };
