@@ -1,15 +1,15 @@
 import Friend from 'components/FriendList/Friend';
 
-function FriendList ({items}) {
+function FriendList ({friends}) {
 
     return(
         <ul>
-            {items.map(item =>
-                <li  key={item.id}>
+            {friends.map(({id,avatar,name,isOnline }) =>
+                <li  key={id}>
                 <Friend
-                avatar={item.avatar}
-                name={item.name}
-                isOnline={item.isOnline}
+                avatar={avatar}
+                name={name}
+                isOnline={isOnline}
                 />
                 </li>
             )}
