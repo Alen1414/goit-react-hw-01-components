@@ -1,20 +1,21 @@
-import FriendList from 'components/FriendList/FriendList';
+import Friends from 'components/FriendList/Friend';
 
-function Friends ({items}) {
+function Friend ({items}) {
 
     return(
         <ul>
-            {items.map(item =>(
+            {items.map(item =>
                 <li  key={item.id}>
-                <FriendList
+                <Friends
                 avatar={item.avatar}
                 name={item.name}
                 isOnline={item.isOnline}
                 />
                 </li>
-            ))}
+            )}
         </ul>
         
-    );
+    )
 }
-export default Friends;
+export default Friend;
+
