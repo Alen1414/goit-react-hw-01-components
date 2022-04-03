@@ -1,12 +1,12 @@
-import Friends from 'components/FriendList/Friend';
+import Friend from 'components/FriendList/Friend';
 
-function Friend ({items}) {
+function FriendList ({items}) {
 
     return(
         <ul>
             {items.map(item =>
                 <li  key={item.id}>
-                <Friends
+                <Friend
                 avatar={item.avatar}
                 name={item.name}
                 isOnline={item.isOnline}
@@ -17,5 +17,5 @@ function Friend ({items}) {
         
     )
 }
-export default Friend;
+export default FriendList;
 

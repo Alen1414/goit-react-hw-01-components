@@ -1,7 +1,7 @@
 import css from './FriendList.module.css'
 
 
-const FriendList =({avatar,name,isOnline}) =>{
+const Friend =({avatar,name,isOnline}) =>{
     return(
         <li className={css.item}>
   <span className={css.status}>{isOnline}</span>
@@ -11,4 +11,4 @@ const FriendList =({avatar,name,isOnline}) =>{
     );
 };
 
-export default FriendList;
+export default Friend;
