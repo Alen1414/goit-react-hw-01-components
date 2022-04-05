@@ -1,28 +1,22 @@
-import css from './TransactionHistory.module.css'
 
+import PropTypes from 'prop-types';
 
-const TransactionHistory =() =>{
-    return(<table className={css.transaction_history}>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Amount</th>
-        <th>Currency</th>
-      </tr>
-    </thead>
-  
-    <tbody>
-      <tr>
-        <td>Invoice</td>
-        <td>125</td>
-        <td>USD</td>
-      </tr>
-      <tr>
-        <td>Withdrawal</td>
-        <td>85</td>
-        <td>USD</td>
-      </tr>
-    </tbody>
-  </table>)};
+const Transaction =({type,amount,currency}) =>{
+    return(
+    <>
+        <td>{type}</td>
+        <td>{amount}</td>
+        <td>{currency}</td>
+      </>
+     )
+    };
 
-    export default TransactionHistory;
+    export default Transaction;
+    
+    Transaction.propTypes ={
+    
+      type: PropTypes.string,
+      amount: PropTypes.string,
+      currency: PropTypes.string,
+    };
+    

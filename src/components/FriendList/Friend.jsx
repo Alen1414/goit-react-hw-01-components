@@ -1,10 +1,11 @@
 import css from './FriendList.module.css'
+import PropTypes from 'prop-types';
 
 
 const Friend =({avatar,name,isOnline}) =>{
     return(
         <section className={css.item}>
-  <span className={css.status}>{isOnline}</span>
+  <span className={css.status} tyle={{backgroundColor: isOnline ? 'green': 'red'}}>{isOnline}</span>
   <img className={css.avatar} src={avatar} alt="User avatar" width="48" />
     <p className={css.name}>{name}</p>
 </section>
@@ -12,3 +13,11 @@ const Friend =({avatar,name,isOnline}) =>{
 };
 
 export default Friend;
+
+Friend.propTypes ={
+    
+    avatar: PropTypes.string,
+    name: PropTypes.string,
+    isOnline: PropTypes.bool,
+    
+ };
