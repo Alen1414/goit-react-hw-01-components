@@ -2,15 +2,18 @@
   margin-left: auto;
   margin-right: auto;
 
-  width: 320px;
+  width: 620px;
  text-align: center;
   padding: 10px;
   border: 2px solid gray;
  list-style: none;
- background-color: rgb(219, 211, 211);
+ background-color: white;
 }
 .tittle{
-padding: 20px;
-bottom: 2px;
-background-color: rgb(125, 219, 248);
+
+background-color: rgb(10, 183, 236);
+}
+
+tr:nth-child(2n) {
+  background-color: rgb(226, 185, 185);
 }
